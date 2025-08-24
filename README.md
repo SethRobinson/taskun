@@ -85,7 +85,7 @@ python3 taskun_r08.py
 - Special thanks to [dwangoAC](https://github.com/dwangoac/TASBot-Projects), keeper of TASBot
 
 ### License
-Same as the tewtal's TASBot project?  I don't see any tho.  My added parts are licensed under [Unlicense](https://en.wikipedia.org/wiki/Unlicense), do whatever.
+Hmm, I don't see any license on [tewtal's project](https://github.com/tewtal/tasbot) (what this is based on) - I'll just say my added parts are licensed under [Unlicense](https://en.wikipedia.org/wiki/Unlicense), do whatever.
 
 ## Find Seth here:
 - **Website**: [rtsoft.com](https://rtsoft.com)
