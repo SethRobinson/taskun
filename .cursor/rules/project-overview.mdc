@@ -1,0 +1,33 @@
+# TASkun Project Overview
+
+TASkun is a Raspberry Pi-based menu system for the TASBot replay device that plays back tool-assisted speedruns on real Famicom/NES hardware.
+
+## Core Components
+
+- **Main Application**: [taskun_r08.py](mdc:taskun_r08.py) - The primary application that handles replay file selection, playback, and user interaction
+- **OLED Display**: [oled_display.py](mdc:oled_display.py) - Handles the 1.3" I2C OLED display (SSD1306) for menu navigation and status display
+- **Dependencies**: [requirements.txt](mdc:requirements.txt) - Python package dependencies including luma.oled, smbus2, and Pillow
+- **Replay Files**: [tasmovies/](mdc:tasmovies/) - Directory containing .r08 replay files for various NES games
+
+## Key Features
+- Interactive OLED menu for selecting .r08 replay files
+- USB gamepad support for navigation
+- Auto-start service for standalone operation
+- Visual feedback during playback
+- Support for keyboard controls (W/S for navigation, Enter for selection)
+
+## Hardware Requirements
+- Raspberry Pi with I2C-enabled OLED display (SSD1306)
+- CY8CKIT-059 (PSoC 5LP) flashed with TASBot firmware
+- USB gamepad for menu navigation
+- NES console and controller port adapter
+
+## Service Management
+- [taskun.service](mdc:taskun.service) - Systemd service for auto-start
+- [setup_autostart.sh](mdc:setup_autostart.sh) - Setup script for service installation
+- [start_taskun_manually.sh](mdc:start_taskun_manually.sh) - Manual startup script
+- [stop_taskun_service.sh](mdc:stop_taskun_service.sh) - Service stop script
+description:
+globs:
+alwaysApply: false
+---

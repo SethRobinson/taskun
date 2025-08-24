@@ -1,0 +1,35 @@
+# Replay File Handling
+
+## File Format
+- Use .r08 format replay files from TASVideos.org
+- Store replay files in [tasmovies/](mdc:tasmovies/) directory
+- Files contain frame-by-frame controller input data
+- Support for various NES games (Super Mario Bros, Gradius, Duck Tales, etc.)
+
+## File Management
+- Scan [tasmovies/](mdc:tasmovies/) directory for .r08 files
+- Sort files alphabetically for consistent menu ordering
+- Handle missing or corrupted replay files gracefully
+- Display file names without .r08 extension in user interface
+
+## Replay Playback
+- Use TASBot firmware on CY8CKIT-059 for actual replay execution
+- Implement proper serial communication for sending replay data
+- Handle timing and synchronization between Pi and TASBot
+- Provide visual feedback during playback on OLED display
+
+## User Interface
+- Display replay file list on OLED screen
+- Support navigation through file list with joystick/keyboard
+- Show current selection and playback status
+- Provide instructions for Famicom reset button timing
+
+## Error Handling
+- Validate replay file format before playback
+- Handle serial communication errors during playback
+- Provide fallback options when replay fails to start
+- Log playback issues for debugging
+description:
+globs:
+alwaysApply: false
+---

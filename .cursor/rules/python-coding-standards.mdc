@@ -1,0 +1,39 @@
+# Python Coding Standards for TASkun
+
+## Code Style
+- Use Python 3.x syntax and features
+- Follow PEP 8 style guidelines
+- Use meaningful variable and function names
+- Add docstrings for classes and functions
+- Use type hints where appropriate
+
+## Import Organization
+- Standard library imports first
+- Third-party imports second (luma.oled, smbus2, etc.)
+- Local imports last
+- Group imports with blank lines between groups
+
+## Error Handling
+- Use try/except blocks for hardware interactions (OLED, serial, joystick)
+- Graceful degradation when hardware is not available
+- Log errors appropriately for debugging
+
+## Hardware Integration
+- Always check for hardware availability before use
+- Use non-blocking operations where possible
+- Implement proper cleanup in signal handlers
+- Handle I2C communication errors gracefully
+
+## Threading
+- Use daemon threads for background operations
+- Implement proper thread synchronization
+- Clean up resources when threads terminate
+
+## File Operations
+- Use absolute paths for critical files
+- Handle file not found exceptions
+- Use context managers for file operations
+description:
+globs:
+alwaysApply: false
+---

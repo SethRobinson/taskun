@@ -1,0 +1,35 @@
+# Deployment and Service Management
+
+## Service Setup
+- Use [taskun.service](mdc:taskun.service) for systemd integration
+- Run [setup_autostart.sh](mdc:setup_autostart.sh) to install and enable service
+- Service runs as root to access hardware devices
+- Auto-starts on boot for standalone operation
+
+## Manual Operation
+- Use [start_taskun_manually.sh](mdc:start_taskun_manually.sh) for manual startup
+- Use [stop_taskun_service.sh](mdc:stop_taskun_service.sh) to stop service
+- SSH access available for remote control
+- Keyboard controls (W/S/Enter) work without OLED/joystick
+
+## Dependencies
+- Install packages from [requirements.txt](mdc:requirements.txt)
+- Enable I2C interface in raspi-config
+- Ensure proper permissions for device access
+- Install TASBot firmware on CY8CKIT-059
+
+## Hardware Setup
+- Connect OLED display to I2C pins (SDA: GPIO2, SCL: GPIO3)
+- Connect USB gamepad for navigation
+- Connect CY8CKIT-059 via USB for TASBot communication
+- Connect NES console and controller adapter
+
+## Troubleshooting
+- Check I2C device detection with `i2cdetect -y 1`
+- Verify joystick device at `/dev/input/js0`
+- Monitor service logs with `journalctl -u taskun.service`
+- Use stop file `/tmp/taskun_stop` for external shutdown
+description:
+globs:
+alwaysApply: false
+---

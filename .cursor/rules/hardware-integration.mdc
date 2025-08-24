@@ -1,0 +1,38 @@
+# Hardware Integration Patterns
+
+## OLED Display (SSD1306)
+- I2C address: 0x3c
+- I2C bus: 1
+- Resolution: 128x64 pixels
+- Use [oled_display.py](mdc:oled_display.py) for all display operations
+- Always check OLED_AVAILABLE before using display functions
+- Implement graceful fallback to console output when OLED is unavailable
+
+## Joystick Input
+- Device path: `/dev/input/js0`
+- Use `_JoystickReader` class in [taskun_r08.py](mdc:taskun_r08.py) for input handling
+- Support both USB gamepad and keyboard controls
+- Implement debouncing for navigation inputs
+- Handle device hot-plugging gracefully
+
+## Serial Communication
+- Used for TASBot communication via CY8CKIT-059
+- Implement proper baud rate and serial settings
+- Handle connection timeouts and retries
+- Use non-blocking operations where possible
+
+## GPIO and I2C
+- Enable I2C in raspi-config before use
+- Use smbus2 library for I2C communication
+- Handle I2C bus errors and device not found scenarios
+- Implement proper initialization sequences for hardware
+
+## Service Management
+- Use systemd service for auto-start functionality
+- Implement proper signal handling for graceful shutdown
+- Use stop files for external shutdown requests
+- Clean up resources on service termination
+description:
+globs:
+alwaysApply: false
+---

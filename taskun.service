@@ -1,0 +1,18 @@
+[Unit]
+Description=Taskun R08 Python Script
+After=multi-user.target
+
+[Service]
+Type=simple
+User=pi
+WorkingDirectory=/home/pi/taskun
+ExecStart=/usr/bin/python3 /home/pi/taskun/taskun_r08.py
+Restart=always
+RestartSec=10
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
+
+
