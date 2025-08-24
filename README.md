@@ -2,7 +2,7 @@
 
 <img src="images/taskun.jpg" alt="TASkun Project" width="600">
 
-A Raspberry Pi-based system based on the [TASBot replay device](https://github.com/tewtal/tasbot) but with added OLED display, joystick navigation and some other misc changes.
+A Raspberry Pi-based system based on tewtal's [TAS console replay device](https://github.com/tewtal/tasbot) but with added OLED display, joystick navigation and some other misc changes.
 
 This was just a quick little thing I made for a meetup, I don't recommend anybody work from the code, but I like to put stuff online so here we go.
 
